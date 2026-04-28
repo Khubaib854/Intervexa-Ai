@@ -20,9 +20,9 @@ from backend.ai_interview_engine import (
 app = Flask(__name__,
             template_folder=os.path.join('Frontend', 'templates'),
             static_folder=os.path.join('Frontend', 'static'))
-CORS(app, supports_credentials=True)
-app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-app.config['SESSION_COOKIE_SECURE'] = False
+CORS(app, origins=["https://intervexa-ai.vercel.app/"], supports_credentials=True)
+app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.secret_key = os.environ.get('SECRET_KEY', 'interviewpro-secret-change-in-production')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
