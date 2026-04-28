@@ -20,7 +20,11 @@ from backend.ai_interview_engine import (
 app = Flask(__name__,
             template_folder=os.path.join('Frontend', 'templates'),
             static_folder=os.path.join('Frontend', 'static'))
-CORS(app, origins=["https://intervexa-ai.vercel.app/"], supports_credentials=True)
+CORS(app, 
+     origins=["https://intervexa-ai.vercel.app"],
+     supports_credentials=True,
+     allow_headers=["Content-Type", "Authorization"],
+     methods=["GET", "POST", "OPTIONS"])
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.secret_key = os.environ.get('SECRET_KEY', 'interviewpro-secret-change-in-production')
