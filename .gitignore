@@ -1,0 +1,16 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+backend/flask_session/
+backend/uploads/
+backend/history.json
+backend/interview_state.json
+Frontend/node_modules/
+Frontend/dist/
+node_modules/
+run.bat
+Thumbs.db
+backend az.zip
