@@ -80,7 +80,7 @@ export default function Navbar({ toggleDarkMode }) {
               </button>
             </div>
 
-            <ul className="navbar-nav ms-auto align-items-lg-center align-items-start gap-4 gap-lg-4 py-2 py-lg-0 w-100">
+            <ul className="navbar-nav ms-auto align-items-lg-center align-items-start gap-4 gap-lg-4 py-2 py-lg-0">
               <li className="nav-item">
                 <Link className={`nav-link-custom ${isActive('/') ? 'active' : ''}`} to="/" onClick={closeNavbar}>Home</Link>
               </li>
@@ -145,6 +145,9 @@ export default function Navbar({ toggleDarkMode }) {
           }
           .mobile-menu.show {
             left: 0;
+          }
+          .mobile-menu .navbar-nav {
+            width: 100%;
           }
           .mobile-backdrop {
             position: fixed;
